@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-deep: #AA7D2D;
+  --color-espresso: #3B2A1A;
+  --color-mocha: #7A5A44;
+  --color-ivory: #FBF6EC;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-arabic: "Amiri", "Aref Ruqaa", serif;
+  --font-sans: "Jost", sans-serif;
+}
+
+html { scroll-behavior: auto; }
+body { margin: 0; font-family: var(--font-sans); background: #fbf8f2; }
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.04;
+}
