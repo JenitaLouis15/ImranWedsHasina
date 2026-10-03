@@ -16,13 +16,15 @@ export default function Closing() {
       {/* ---------- Photo section ---------- */}
       <div className="relative flex min-h-[88svh] items-center justify-center overflow-hidden px-6 py-24 text-center">
         {/* background photo with slow zoom */}
-        <motion.div
+        <motion.img
           aria-hidden="true"
           initial={{ scale: 1 }}
           animate={{ scale: 1.1 }}
           transition={{ duration: 24, repeat: Infinity, repeatType: 'reverse', ease: 'linear' }}
-          className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: `url(${BG})`, backgroundPosition: '35% center' }}
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ objectPosition: '35% center' }}
+          src={BG}
+          loading="lazy"
         />
         {/* dark warm overlay so text is always readable */}
         <div
