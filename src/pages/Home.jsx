@@ -14,10 +14,12 @@ import Closing from '../sections/Closing.jsx'
 export default function Home() {
   const { isMuted, startMusic, toggleMute } = useMusic()
   const [opened, setOpened] = useState(false)
+  const [showHearts, setShowHearts] = useState(false)
 
   const handleOpen = () => {
     if (opened) return
     setOpened(true)
+    setTimeout(() => setShowHearts(true), 1200)
     requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }))
   }
 
@@ -29,7 +31,7 @@ export default function Home() {
       <EntranceGate opened={opened} onOpen={handleOpen} startMusic={startMusic} />
 
       <div className="relative w-full overflow-hidden bg-[#fbf8f2] text-espresso">
-        {opened && <GoldenHearts />}
+        {showHearts && <GoldenHearts />}
         <Intro />
         <Couple />
         <Countdown target={target} />

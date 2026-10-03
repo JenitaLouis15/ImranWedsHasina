@@ -35,6 +35,7 @@ function Curtain({ side }) {
         boxShadow: left
           ? '8px 0 30px rgba(0,0,0,0.45)'
           : '-8px 0 30px rgba(0,0,0,0.45)',
+        willChange: 'transform',
       }}
     />
   )
@@ -77,6 +78,7 @@ function Seal({ onClick }) {
             'radial-gradient(circle at 32% 28%, #f0d77a 0%, #D4AF37 38%, #AA7D2D 72%, #7d5a1e 100%)',
           boxShadow:
             '0 14px 30px rgba(59,42,26,0.45), inset 0 2px 4px rgba(255,255,255,0.35), inset 0 -4px 8px rgba(80,50,10,0.45)',
+          willChange: 'transform',
         }}
       >
         <span className="absolute inset-[6px] rounded-full border border-[#fbf6ec]/50" />
@@ -191,7 +193,7 @@ export default function EntranceGate({ onOpen, opened, startMusic }) {
                 shadow-[0_30px_80px_rgba(0,0,0,0.55)] 
                 xs:px-5 xs:pb-15 xs:pt-8 
                 sm:max-h-[calc(100%-2rem)] sm:max-w-md sm:px-10 sm:pb-16 sm:pt-10"
-              style={{ minHeight: 'min(34rem, 100%)' }}
+              style={{ minHeight: 'min(34rem, 100%)', willChange: 'transform, opacity' }}
             >
               {/* double gold frame */}
               <span className="pointer-events-none absolute inset-2.5 border border-gold/40" />

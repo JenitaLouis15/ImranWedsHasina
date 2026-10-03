@@ -31,7 +31,7 @@ export default function GoldenHearts() {
             opacity: [0, p.opacity, p.opacity, 0],
           }}
           transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: 'linear' }}
-          style={{ position: 'absolute', left: `${p.left}%`, bottom: -30 }}
+          style={{ position: 'absolute', left: `${p.left}%`, bottom: -30, willChange: 'transform, opacity' }}
         >
           <path
             d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.4 3 5 6.4 5c2 0 3.6 1.1 5.6 3.2C14 6.1 15.6 5 17.6 5 21 5 22.8 8.4 21.5 11.8 19.5 16.4 12 21 12 21z"
